@@ -1,0 +1,10 @@
+{
+    "redirects": [
+      {
+        "source": "/(.*)",
+        "destination": "https://clyris.in/$1",
+        "permanent": true
+      }
+    ]
+  }
+  
