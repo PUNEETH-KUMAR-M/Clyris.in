@@ -40,7 +40,7 @@ export default function Home() {
     <div className="font-sans min-h-screen bg-gradient-to-br from-blue-400 via-purple-400 to-pink-400 dark:from-blue-900 dark:via-purple-900 dark:to-pink-900">
       {/* Hero Section */}
       <section id="home" className="flex flex-col items-center justify-center text-center py-24 px-4 gap-6">
-        <motion.h1 initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="text-4xl sm:text-6xl font-extrabold bg-gradient-to-r from-blue-600 to-cyan-400 bg-clip-text text-transparent mb-2">
+        <motion.h1 initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="text-4xl sm:text-6xl font-extrabold text-gray-900 dark:text-white mb-2 drop-shadow-md">
           Clyris Technologies
         </motion.h1>
         <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2, duration: 0.7 }} className="text-lg sm:text-2xl text-gray-700 dark:text-gray-200 max-w-2xl">
