@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Clyris Technologies",
-  description: "Empowering Innovation: 3D Printing, Drones,Custom Projects IoT, Web, and More. Clyris Technologies offers 3D printing, CAD design, custom projects, drone building, web development, IoT kits, and import/export services.",
+  description: "India’s Trusted Tech Partner – Empowering 100+ Clients with Custom Projects, 3D Printing, and Cutting-Edge Tech Solutions",
 };
 
 export default function RootLayout({
