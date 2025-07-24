@@ -43,8 +43,12 @@ export default function Home() {
         <motion.h1 initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="text-4xl sm:text-6xl font-extrabold text-gray-900 dark:text-white mb-2 drop-shadow-md">
           Clyris Technologies
         </motion.h1>
-        <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2, duration: 0.7 }} className="text-lg sm:text-2xl text-gray-700 dark:text-gray-200 max-w-2xl">
-          Empowering Innovation: 3D Printing, Drones, IoT, Web, and More
+        <motion.p
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ delay: 0.2, duration: 0.7 }}
+    className="text-lg sm:text-2xl text-gray-700 dark:text-gray-200 max-w-2xl text-center">
+    India’s Trusted Tech Partner — Empowering 100+ Clients with Custom Projects, 3D Printing, Custom drones, and Cutting-Edge Tech Solutions
         </motion.p>
         <motion.a
           initial={{ scale: 0.8, opacity: 0 }}
