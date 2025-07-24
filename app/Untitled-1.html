@@ -1,0 +1,132 @@
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { useEffect } from "react";
+import { motion } from "framer-motion";
+
+const services = [
+  {
+    title: "3D Printing & Design",
+    description: "Precision 3D modeling and printing for prototypes, models, and more.",
+  },
+  {
+    title: "Custom College/School Projects",
+    description: "Electronics, robotics, and IoT projects tailor-made for students.",
+  },
+  {
+    title: "Custom Drone Building",
+    description: "Design and build drones for surveillance, delivery, or hobby use.",
+  },
+  {
+    title: "Website Development & Hosting",
+    description: "Modern websites with secure and reliable hosting for your business.",
+  },
+  {
+    title: "IoT & Robotics Kits",
+    description: "Affordable kits and components for your next innovation.",
+  },
+  {
+    title: "Import & Export Services",
+    description: "Global trade solutions for your hardware needs.",
+  },
+];
+
+export default function ClyrisHome() {
+  useEffect(() => {
+    document.title = "Clyris Technologies | Innovate. Build. Scale.";
+  }, []);
+
+  return (
+    <main className="min-h-screen bg-gradient-to-br from-white to-slate-100">
+      {/* Navbar */}
+      <nav className="bg-white shadow sticky top-0 z-50">
+        <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+          <h1 className="text-xl font-bold text-slate-800">Clyris Technologies</h1>
+          <div className="space-x-4 text-slate-700 font-medium">
+            <a href="#services" className="hover:text-blue-600">Services</a>
+            <a href="#about" className="hover:text-blue-600">About</a>
+            <a href="#contact" className="hover:text-blue-600">Contact</a>
+          </div>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="text-center py-16 px-4 bg-gradient-to-r from-indigo-100 to-blue-50">
+        <motion.h1
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className="text-4xl md:text-5xl font-bold text-slate-800"
+        >
+          Empowering Innovation, Building the Future
+        </motion.h1>
+        <p className="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
+          We provide comprehensive solutions in 3D printing, drone development, IoT, and tech services to help you achieve your project goals.
+        </p>
+        <a
+          href="https://wa.me/91XXXXXXXXXX"
+          target="_blank"
+          rel="noopener"
+        >
+          <Button className="mt-6 text-lg px-6 py-2">Chat with Us on WhatsApp</Button>
+        </a>
+      </section>
+
+      {/* Services Section */}
+      <section id="services" className="py-12 px-4">
+        <h2 className="text-3xl font-semibold text-center text-slate-800 mb-10">Our Services</h2>
+        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {services.map((service, i) => (
+            <motion.div
+              key={service.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: i * 0.1 }}
+            >
+              <Card className="shadow-md hover:shadow-xl transition-all">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold text-slate-800 mb-2">
+                    {service.title}
+                  </h3>
+                  <p className="text-slate-600 text-sm">
+                    {service.description}
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="py-16 px-4 bg-slate-50">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-semibold text-slate-800 mb-4">About Us</h2>
+          <p className="text-slate-600 text-md">
+            Clyris Technologies is a young and energetic startup committed to delivering innovative solutions in tech and hardware. From crafting custom college projects to importing top-grade components, our mission is to enable makers, students, and businesses to thrive in the digital and physical world.
+          </p>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-16 px-4 text-center">
+        <h2 className="text-3xl font-semibold text-slate-800 mb-4">Get in Touch</h2>
+        <p className="text-slate-600 mb-6">
+          Reach out to us on WhatsApp for inquiries, collaborations, or custom project support.
+        </p>
+        <a
+          href="https://wa.me/91XXXXXXXXXX"
+          target="_blank"
+          rel="noopener"
+        >
+          <Button className="text-lg px-6 py-2">Start WhatsApp Chat</Button>
+        </a>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-white border-t py-6 text-center text-sm text-slate-500">
+        © {new Date().getFullYear()} Clyris Technologies. All rights reserved.
+      </footer>
+    </main>
+  );
+}
